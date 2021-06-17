@@ -1,0 +1,1112 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&display=swap");
+.fade__animation {
+  animation: fade 1s linear;
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background: #0d1b2a;
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-column: 1/-1;
+  background: #778da9;
+}
+nav .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav .logo img {
+  width: 5rem;
+  filter: brightness(100%);
+  transition: 0.2s linear;
+}
+nav .logo img:hover {
+  transition: 0.2s linear;
+  filter: brightness(200%);
+}
+
+menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-column: 1/-1;
+  background: #778da9;
+}
+menu .menu__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-evenly;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  padding: 0.3em 0;
+}
+menu .menu__list .menu__item {
+  font-size: 1.4em;
+  position: relative;
+  transition: 0.2s linear;
+}
+menu .menu__list .menu__item .menu__link {
+  font-weight: 700;
+  color: #f2f2f2;
+}
+menu .menu__list .menu__item::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0.1em;
+  background: #e0e1dd;
+  transition: 0.2s linear;
+}
+menu .menu__list .menu__item:hover::before {
+  transition: 0.2s linear;
+  width: 110%;
+}
+menu .menu__list .active {
+  background: #e0e1dd;
+  padding: 0.1em 0.2em;
+}
+menu .menu__list .active .menu__link {
+  font-weight: 700;
+  color: #415a77;
+}
+menu .menu__list .active::before {
+  display: none;
+}
+
+header {
+  grid-column: 1/-1;
+}
+
+#header__start {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  background-image: url(../../../assets/images/building.jpg);
+}
+#header__start h1 {
+  text-shadow: 0 0 5px #000;
+  color: #e0e1dd;
+  text-align: center;
+  cursor: default;
+}
+
+main {
+  grid-column: 1/-1;
+  margin: 2em 0;
+}
+
+#start #about {
+  margin: 2em 0;
+  color: #e0e1dd;
+}
+#start #about h2 {
+  text-align: center;
+  font-size: 2em;
+  padding: 0.45em 1em;
+  text-align: center;
+  color: #f2f2f2;
+}
+#start #about .wrapper {
+  flex-wrap: wrap;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(auto-fit, minmax(150px, auto));
+  padding: 0.45em;
+  grid-gap: 0.45em;
+  height: auto;
+}
+#start #about .wrapper section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-direction: column;
+  text-align: center;
+}
+#start #about .wrapper section figure img {
+  filter: brightness(100%) grayscale(40%);
+  width: 100%;
+}
+#start #about .wrapper section p {
+  font-size: 1.2em;
+}
+#start #about .wrapper section strong {
+  font-size: 1.4em;
+}
+#start #advantage {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 1em 0;
+  background-image: url(../../../assets/images/new-york.jpg);
+  color: #f2f2f2;
+}
+#start #advantage h2 {
+  text-shadow: 0 0 5px #000;
+  font-size: 2.4em;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.445);
+}
+#start #advantage .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  padding: 3em 0;
+  background: rgba(0, 0, 0, 0.445);
+  color: gold;
+}
+#start #advantage .wrapper section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 0.35em;
+  width: calc(100% / 3);
+  height: 200px;
+  cursor: default;
+}
+#start #advantage .wrapper section i {
+  font-size: 3em;
+}
+#start #advantage .wrapper section h3 {
+  font-size: 2em;
+}
+#start #advantage .wrapper section p {
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #e0e1dd;
+}
+#start #gallery {
+  margin: 1em 0;
+}
+#start #gallery h2 {
+  font-size: 2.4em;
+  text-align: center;
+  color: #f2f2f2;
+}
+#start #gallery .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: calc(100% - 3em);
+  height: 100px;
+  height: auto;
+  padding: 0.45em 0;
+}
+#start #gallery .wrapper .gallery__tile {
+  width: calc(100% / 5);
+  height: 200px;
+  margin: 0 0.45em;
+  overflow: hidden;
+  position: relative;
+}
+#start #gallery .wrapper .gallery__tile img {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  filter: brightness(60%) opacity(90%);
+  transition: 0.2s linear;
+}
+#start #gallery .wrapper .gallery__tile img:hover {
+  transition: 0.2s linear;
+  filter: brightness(100%) opacity(100%);
+}
+#start #gallery button {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0.45em 0;
+  font-size: 1.45rem;
+  font-weight: 600;
+  padding: 0.45rem 0.65rem;
+  background: none;
+  border: none;
+  border-bottom: 0.15em solid #f2f2f2;
+}
+#start #gallery button a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f2f2f2;
+  width: 100%;
+  height: 100%;
+  transition: 0.2s linear;
+}
+#start #gallery button:hover a {
+  color: #0d1b2a;
+  transition: 0.2s linear;
+}
+#start #gallery button::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  width: 100%;
+  height: 0;
+  background: #f2f2f2;
+  z-index: -1;
+  transition: 0.2s linear;
+}
+#start #gallery button:hover::before {
+  transition: 0.2s linear;
+  height: 100%;
+}
+
+#company {
+  color: #f2f2f2;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+#company h2 {
+  font-size: 3em;
+  text-align: center;
+  position: relative;
+}
+#company h2::before {
+  content: "";
+  position: absolute;
+  bottom: 0.1em;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10em;
+  height: 0.1em;
+  background: #778da9;
+  border-radius: 0.6em;
+  z-index: -1;
+}
+#company .teaser {
+  padding: 0.45em;
+  font-size: 1.7em;
+  display: block;
+  text-align: center;
+  font-weight: 600;
+}
+#company article {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em;
+  flex-wrap: wrap;
+}
+#company article .tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+  max-height: 500px;
+  margin: 1em 0;
+}
+#company article .tile figure, #company article .tile .text {
+  width: 50%;
+  overflow: hidden;
+  height: 100%;
+}
+#company article .tile figure img {
+  width: 100%;
+  filter: brightness(60%);
+}
+#company article .tile .text {
+  padding: 0.45em;
+  font-size: 1.2em;
+}
+#company article .tile .text strong {
+  color: #e0e1dd;
+}
+#company h3 {
+  text-align: center;
+  font-size: 1.65em;
+  padding: 0.45em 0;
+  font-style: italic;
+}
+
+#offer {
+  color: #f2f2f2;
+}
+#offer h2 {
+  text-align: center;
+  font-size: 3em;
+  position: relative;
+}
+#offer h2::before {
+  content: "";
+  position: absolute;
+  bottom: 0.1em;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10em;
+  height: 0.1em;
+  background: #778da9;
+  border-radius: 0.6em;
+  z-index: -1;
+}
+#offer .teaser {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: block;
+  text-align: center;
+  font-size: 2em;
+  word-wrap: break-word;
+  padding: 0.5em;
+  font-weight: 400;
+}
+#offer article {
+  padding: 1em;
+}
+#offer article .tile {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 1em 0;
+}
+#offer article .tile .text, #offer article .tile figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+#offer article .tile figure {
+  max-height: 400px;
+}
+#offer article .tile .text {
+  color: #f2f2f2;
+  padding: 0.5em;
+}
+#offer article .tile .text h3 {
+  font-size: 2em;
+  margin: 0.45em 0;
+  text-align: center;
+}
+#offer article .tile .text ul {
+  list-style: disc;
+}
+#offer article .tile .text ul li {
+  margin: 0.2em 0;
+  font-weight: 300;
+}
+#offer article .tile .text p {
+  text-align: center;
+  font-weight: 300;
+}
+
+#realizacje h2 {
+  font-size: 3em;
+  color: #f2f2f2;
+  text-align: center;
+  position: relative;
+}
+#realizacje h2::before {
+  content: "";
+  position: absolute;
+  bottom: 0.1em;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10em;
+  height: 0.1em;
+  background: #778da9;
+  border-radius: 0.6em;
+  z-index: -1;
+}
+#realizacje section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-evenly;
+  margin: 0.45em 0;
+}
+#realizacje section button {
+  background: none;
+  border: none;
+  font-size: 1.45em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #e0e1dd;
+  padding: 7px 12px;
+  position: relative;
+  transition: 0.2s linear;
+  cursor: pointer;
+}
+#realizacje section button:hover {
+  transition: 0.2s linear;
+  opacity: 0.85;
+}
+#realizacje section .active::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 0.15em;
+  background: #e0e1dd;
+  opacity: 0.4;
+}
+#realizacje .wrapper {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+}
+#realizacje .wrapper .tab__content {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0.5em;
+  grid-gap: 1em;
+}
+#realizacje .wrapper .tab__content figure {
+  width: 100%;
+}
+#realizacje .wrapper .tab__content figure img {
+  width: 100%;
+}
+#realizacje .wrapper .tab__content figure p {
+  background: #415a77;
+  padding: 0.2em;
+  text-align: center;
+}
+#realizacje .wrapper .tab__content figure p small {
+  color: #e0e1dd;
+}
+#realizacje .wrapper .tab__content figure p strong {
+  color: #f2f2f2;
+}
+
+#galeria h2 {
+  font-size: 3.5em;
+  color: #f2f2f2;
+  position: relative;
+  text-align: center;
+}
+#galeria h2::before {
+  content: "";
+  position: absolute;
+  bottom: 0.1em;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10em;
+  height: 0.1em;
+  background: #778da9;
+  border-radius: 0.6em;
+  z-index: -1;
+}
+#galeria .wrapper {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  overflow: hidden;
+  width: 95%;
+  padding: 0.45em;
+  grid-gap: 0.5em;
+}
+#galeria .wrapper figure {
+  width: 100%;
+  overflow: hidden;
+}
+#galeria .wrapper figure img {
+  width: 100%;
+  cursor: pointer;
+  filter: grayscale(60%) brightness(80%);
+  transition: 0.2s linear;
+}
+#galeria .wrapper figure img:hover {
+  transition: 0.2s linear;
+  filter: grayscale(0) brightness(110%);
+}
+#galeria .wrapper figure p {
+  border: 1px solid #e0e1dd;
+  color: #f2f2f2;
+  text-align: center;
+}
+
+.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  background: #0d1b2a;
+  transition: 0.2s ease-in-out;
+  z-index: -1;
+}
+.fullscreen button {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.45em;
+  background: none;
+  border: none;
+  color: #e0e1dd;
+  transition: 0.1s linear;
+  cursor: pointer;
+}
+.fullscreen button:hover {
+  transition: 0.1s linear;
+  transform: rotate(90deg);
+}
+
+#kontakt {
+  color: #f2f2f2;
+}
+#kontakt h2 {
+  text-align: center;
+  font-size: 3em;
+  position: relative;
+  cursor: default;
+}
+#kontakt h2::before {
+  content: "";
+  position: absolute;
+  bottom: 0.1em;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10em;
+  height: 0.1em;
+  background: #778da9;
+  border-radius: 0.6em;
+  z-index: -1;
+}
+#kontakt .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2em 0;
+}
+#kontakt .wrapper .address {
+  flex: 1;
+  padding: 0.45em 0;
+}
+#kontakt .wrapper .address img {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10rem;
+  filter: brightness(50%) invert(100%);
+}
+#kontakt .wrapper .address ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  width: 100%;
+  flex-direction: column;
+}
+#kontakt .wrapper .address ul li {
+  width: 100%;
+  padding: 1em 0;
+}
+#kontakt .wrapper .address ul li i {
+  font-size: 1.75em;
+  color: #778da9;
+}
+#kontakt .wrapper .address ul li a {
+  color: #e0e1dd;
+  font-size: 1.4em;
+  font-weight: 300;
+}
+#kontakt .wrapper .form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex: 2;
+}
+#kontakt .wrapper .form h3 {
+  font-size: 2.7em;
+  cursor: default;
+}
+#kontakt .wrapper .form form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2em 5em;
+  width: 100%;
+}
+#kontakt .wrapper .form form input, #kontakt .wrapper .form form textarea, #kontakt .wrapper .form form button {
+  margin: 0.2em 0;
+  border: none;
+  background: none;
+  font-family: "Open Sans", sans-serif;
+}
+#kontakt .wrapper .form form input, #kontakt .wrapper .form form textarea {
+  width: 400px;
+  padding-left: 0.5em;
+  color: #f2f2f2;
+}
+#kontakt .wrapper .form form input {
+  height: 50px;
+  font-weight: 900;
+  font-size: 1.1rem;
+  border-bottom: 0.2em solid #778da9;
+}
+#kontakt .wrapper .form form textarea {
+  height: 150px;
+  font-size: 0.9em;
+  font-weight: 800;
+  border: 0.2em solid #778da9;
+}
+#kontakt .wrapper .form form button {
+  padding: 7px 12px;
+  font-size: 1.3em;
+  color: #778da9;
+  font-weight: 900;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+#kontakt .wrapper .form form button:hover {
+  transition: 0.2s ease-in-out;
+  color: #f2f2f2;
+}
+
+footer {
+  grid-column: 1/-1;
+  background: #778da9;
+  height: auto;
+}
+footer #map iframe {
+  width: 100%;
+}
+footer address {
+  text-align: center;
+  margin: 1.5em 0;
+  color: #f2f2f2;
+  font-style: normal;
+}
+footer address h2 {
+  font-size: 2em;
+  cursor: default;
+}
+footer address section {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  max-width: auto;
+  justify-content: space-around;
+  font-size: 1.45em;
+  height: auto;
+  margin: 1em 0;
+}
+footer address section a {
+  color: #e0e1dd;
+}
+footer img {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  filter: opacity(0.4);
+  width: auto;
+}
+footer .footer__bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #0d1b2a;
+  font-size: 1.3em;
+  padding: 0.45em 0;
+}
+footer .footer__bar a {
+  color: #e0e1dd;
+}
+
+@media only screen and (orientation: portrait) and (max-width: 700px) {
+  menu .menu__list {
+    flex-direction: column;
+    padding: 0.3em 0;
+  }
+  menu .menu__list .menu__item {
+    font-size: 1em;
+    margin: 0.2em 0;
+  }
+  menu .menu__list .menu__item .menu__link {
+    font-weight: 400;
+  }
+  menu .menu__list .menu__item::before {
+    display: none;
+  }
+  menu .menu__list .active .menu__link {
+    font-weight: 700;
+  }
+
+  #start #about h2 {
+    font-size: 1.5em;
+    padding: 0.1em 0.1em;
+  }
+  #start #about .wrapper {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(auto-fit, 1fr);
+  }
+  #start #about .wrapper section p {
+    font-size: 1.05em;
+  }
+  #start #about .wrapper section strong {
+    font-size: 1.15em;
+  }
+  #start #advantage {
+    padding: 1em 0;
+    height: auto;
+  }
+  #start #advantage h2 {
+    font-size: 2.4em;
+  }
+  #start #advantage .wrapper {
+    flex-direction: column;
+  }
+  #start #advantage .wrapper section {
+    width: 100%;
+    height: auto;
+  }
+  #start #advantage .wrapper section i {
+    font-size: 1.75em;
+  }
+  #start #advantage .wrapper section h3 {
+    font-size: 1.5em;
+  }
+  #start #advantage .wrapper section p {
+    font-size: 1.3em;
+  }
+  #start #gallery h2 {
+    font-size: 2.4em;
+    text-align: center;
+    color: #f2f2f2;
+  }
+  #start #gallery .wrapper {
+    flex-direction: column;
+  }
+  #start #gallery .wrapper .gallery__tile {
+    width: 100%;
+  }
+
+  #company {
+    color: #f2f2f2;
+  }
+  #company h2 {
+    font-size: 1.75em;
+  }
+  #company h2::before {
+    width: 80%;
+  }
+  #company .teaser {
+    font-size: 1.4em;
+  }
+  #company article .tile {
+    flex-direction: column;
+  }
+  #company article .tile figure, #company article .tile .text {
+    width: 100%;
+  }
+  #company article .tile .text {
+    font-size: 1em;
+    text-align: center;
+  }
+  #company article .tile .text strong {
+    color: #e0e1dd;
+  }
+  #company h3 {
+    font-size: 1.25em;
+  }
+
+  #offer h2 {
+    font-size: 2.4em;
+  }
+  #offer h2::before {
+    width: 80%;
+  }
+  #offer .teaser {
+    font-size: 1.45em;
+    padding: 0.1em;
+  }
+  #offer article {
+    padding: 0.45em;
+  }
+  #offer article .tile {
+    grid-template-columns: repeat(1, 1fr);
+    margin: 1em 0;
+  }
+  #offer article .tile .text {
+    padding: 0.5em;
+  }
+  #offer article .tile .text h3 {
+    font-size: 2em;
+    margin: 0.45em 0;
+  }
+
+  #realizacje h2 {
+    font-size: 2.4em;
+  }
+  #realizacje h2::before {
+    width: 80%;
+  }
+  #realizacje section {
+    flex-direction: column;
+  }
+  #realizacje section button {
+    margin: 0.5em 0;
+    font-size: 1.1em;
+  }
+  #realizacje .wrapper .tab__content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  #kontakt h2 {
+    font-size: 2.1em;
+  }
+  #kontakt h2::before {
+    width: 80%;
+  }
+  #kontakt .wrapper {
+    flex-direction: column;
+  }
+  #kontakt .wrapper .address {
+    flex: 1;
+    width: 90%;
+  }
+  #kontakt .wrapper .form {
+    flex: 1;
+    width: 90%;
+  }
+  #kontakt .wrapper .form h3 {
+    font-size: 1.85em;
+    cursor: default;
+  }
+  #kontakt .wrapper .form form input, #kontakt .wrapper .form form textarea, #kontakt .wrapper .form form button {
+    margin: 0.4em 0;
+  }
+  #kontakt .wrapper .form form input, #kontakt .wrapper .form form textarea {
+    width: 200px;
+  }
+
+  footer address section {
+    flex-direction: column;
+  }
+  footer img {
+    width: 80%;
+  }
+  footer .footer__bar {
+    font-size: 1.1em;
+  }
+}
+@media only screen and (orientation: landscape) and (max-width: 720px) {
+  menu .menu__list {
+    flex-direction: column;
+    padding: 0.3em 0;
+  }
+  menu .menu__list .menu__item {
+    font-size: 1em;
+    margin: 0.2em 0;
+  }
+  menu .menu__list .menu__item .menu__link {
+    font-weight: 600;
+  }
+  menu .menu__list .menu__item::before {
+    display: none;
+  }
+  menu .menu__list .active .menu__link {
+    font-weight: 800;
+  }
+
+  #start #about h2 {
+    font-size: 1.3em;
+    padding: 0.45em 0.3em;
+  }
+  #start #about .wrapper {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(auto-fit, minmax(100px, auto));
+  }
+  #start #about .wrapper section p {
+    font-size: 1.1em;
+  }
+  #start #about .wrapper section strong {
+    font-size: 1.2em;
+  }
+  #start #advantage h2 {
+    font-size: 2.4em;
+  }
+  #start #advantage .wrapper section {
+    height: auto;
+  }
+  #start #advantage .wrapper section i {
+    font-size: 2em;
+  }
+  #start #advantage .wrapper section h3 {
+    font-size: 1.5em;
+  }
+  #start #advantage .wrapper section p {
+    font-size: 1.3em;
+    font-weight: 400;
+  }
+  #start #gallery h2 {
+    font-size: 2.4em;
+    text-align: center;
+    color: #f2f2f2;
+  }
+  #start #gallery .wrapper {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: column;
+    width: 300px;
+  }
+  #start #gallery .wrapper .gallery__tile {
+    width: 100%;
+  }
+
+  #company h2 {
+    font-size: 2.1em;
+  }
+  #company .teaser {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1em;
+    font-size: 1.2em;
+    font-weight: 300;
+  }
+  #company article {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  #company article .tile {
+    width: 90%;
+    max-height: 1000px;
+    margin: 1em 0;
+    flex-direction: column;
+  }
+  #company article .tile figure, #company article .tile .text {
+    width: 90%;
+    overflow: hidden;
+  }
+  #company article .tile .text {
+    padding: 0.45em;
+    font-size: 0.95em;
+    text-align: center;
+  }
+  #company h3 {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    word-wrap: break-word;
+    font-size: 1.45em;
+  }
+
+  #offer h2 {
+    font-size: 2.5em;
+  }
+  #offer .teaser {
+    font-size: 1.65em;
+  }
+  #offer article {
+    padding: 0.5em;
+  }
+  #offer article .tile {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #offer article .tile .text h3 {
+    font-size: 1.5em;
+    margin: 0.45em 0;
+  }
+
+  #realizacje h2 {
+    font-size: 2.75em;
+  }
+  #realizacje h2::before {
+    width: 80%;
+  }
+  #realizacje section button {
+    font-size: 1.25em;
+  }
+
+  #kontakt h2 {
+    font-size: 2.1em;
+  }
+  #kontakt h2::before {
+    width: 80%;
+  }
+  #kontakt .wrapper {
+    flex-direction: column;
+  }
+  #kontakt .wrapper .address {
+    flex: 1;
+    width: 90%;
+  }
+  #kontakt .wrapper .form {
+    flex: 1;
+    width: 90%;
+  }
+  #kontakt .wrapper .form h3 {
+    font-size: 1.85em;
+    cursor: default;
+  }
+  #kontakt .wrapper .form form input, #kontakt .wrapper .form form textarea, #kontakt .wrapper .form form button {
+    margin: 0.4em 0;
+  }
+  #kontakt .wrapper .form form input, #kontakt .wrapper .form form textarea {
+    width: 300px;
+  }
+}
